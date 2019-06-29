@@ -6,8 +6,6 @@
 ------------
  - PHP >= 7.0.0
  - Laravel >= 5
- 
- ## [更多文档](resource/mds/docs/index.md)
 
  
 # 安装
