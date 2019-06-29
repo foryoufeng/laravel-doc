@@ -26,7 +26,7 @@ Foryoufeng\Doc\DocServiceProvider::class
 You need to publish the resource files by run command
 ```
 
- php artisan vendor:publish --provider=Foryoufeng\Doc\DocServiceProvider::class
+ php artisan doc:install
 
 ```
 

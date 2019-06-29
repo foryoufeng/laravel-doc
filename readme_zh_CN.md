@@ -25,7 +25,7 @@
 运行如下命令来发布资源文件
 ```
 
- php artisan vendor:publish --provider=Foryoufeng\Doc\DocServiceProvider::class
+ php artisan doc:install
 
 ```
 

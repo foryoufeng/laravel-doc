@@ -3,17 +3,16 @@
 namespace Foryoufeng\Doc;
 
 use Illuminate\Support\ServiceProvider;
+use Foryoufeng\Doc\Console\InstallCommand;
 
 class DocServiceProvider extends ServiceProvider
 {
     /**
      * Perform post-registration booting of services.
-     *
-     * @return void
      */
     public function boot()
     {
-        if(!file_exists(config_path('laravel_doc.php'))){
+        if (!file_exists(config_path('laravel_doc.php'))) {
             file_put_contents(
                 base_path('routes/web.php'),
                 file_get_contents(__DIR__.'/../resources/routes/route.php'),
@@ -28,17 +27,18 @@ class DocServiceProvider extends ServiceProvider
             __DIR__.'/../resources/mds' => resource_path('mds'),
             __DIR__.'/../resources/controllers' => app_path('Http/Controllers/Docs'),
         ]);
+
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                InstallCommand::class,
+            ]);
+        }
     }
 
     /**
      * Register any package services.
-     *
-     * @return void
      */
     public function register()
     {
-
     }
-
-
 }
