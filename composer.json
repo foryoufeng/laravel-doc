@@ -1,0 +1,39 @@
+{
+    "name": "foryoufeng/laravel-doc",
+    "description": "A tool for display docs or api docs to others",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "foryoufeng@gmail.com",
+            "email": "1906592238@qq.com",
+            "homepage": "https://doc.linkgoup.com"
+        }
+    ],
+    "homepage": "https://github.com/foryoufeng/laravel-doc",
+    "keywords": ["Laravel", "laravel-doc","doc","api docs"],
+    "require": {
+        "illuminate/support": "~5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Foryoufeng\\Doc\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Foryoufeng\\Doc\\DocServiceProvider"
+            ]
+        }
+    }
+}
