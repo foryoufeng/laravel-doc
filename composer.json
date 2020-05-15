@@ -12,7 +12,7 @@
     "homepage": "https://github.com/foryoufeng/laravel-doc",
     "keywords": ["Laravel", "laravel-doc","doc","api docs"],
     "require": {
-        "illuminate/support": "~5"
+        "laravel/framework": "^5.0||~6.0||~7.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~7.0",
