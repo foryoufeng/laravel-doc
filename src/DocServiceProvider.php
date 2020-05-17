@@ -12,13 +12,6 @@ class DocServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (!file_exists(config_path('laravel_doc.php'))) {
-            file_put_contents(
-                base_path('routes/web.php'),
-                file_get_contents(__DIR__.'/../resources/routes/route.php'),
-                FILE_APPEND
-            );
-        }
         // Publishing doc files.
         $this->publishes([
             __DIR__.'/../resources/assets' => public_path('vendor/laravel-doc'),
